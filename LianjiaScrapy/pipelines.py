@@ -38,13 +38,13 @@ class LianjiaMongodbPipeline(object):
         for new_item in new_items:
             init_add_request(spider, new_item['url'])
 
-        # er_items = self.db['EsfInfo'].find({})
-        # for er_item in er_items:
-        #     init_add_request(spider, er_item['url'])
-        #
-        # zu_items = self.db['ZfInfo'].find({})
-        # for zu_item in zu_items:
-        #     init_add_request(spider, zu_item['url'])
+        er_items = self.db['EsfInfo'].find({})
+        for er_item in er_items:
+            init_add_request(spider, er_item['url'])
+
+        zu_items = self.db['ZfInfo'].find({})
+        for zu_item in zu_items:
+            init_add_request(spider, zu_item['url'])
 
     def close_spider(self, spider):
         self.client.close()
