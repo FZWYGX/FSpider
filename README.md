@@ -9,3 +9,5 @@ mongoexport -h ip和端口 -d 库名 -c 表名 -f 字段名 --type=csv -o ./文�
 结果：
 
 百度云盘：链接：https://pan.baidu.com/s/1-a7LrMFeNkYgATnvbhRGwg  密码：zo4p
+
+启动文件：start.py
