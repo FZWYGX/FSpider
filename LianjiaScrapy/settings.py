@@ -49,7 +49,7 @@ DEFAULT_REQUEST_HEADERS = {
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 # SPIDER_MIDDLEWARES = {
-#    'LianjiaScrapy.middlewares.LianjiascrapySpiderMiddleware': 543,
+#    'LianjiaScrapy.middlewares.LianJiaScrapySpiderMiddleware': 543,
 # }
 
 # Enable or disable downloader middlewares

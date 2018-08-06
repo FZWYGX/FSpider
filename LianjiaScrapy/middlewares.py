@@ -12,6 +12,9 @@ from .Utils_Model.UserAgent import USER_AGENT
 
 
 class UAMiddleware(object):
+    """
+    使用随机的USER_AGENT
+    """
     def __init__(self):
         self.lock = DeferredLock()
         self.update_time = datetime.now()

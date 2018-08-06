@@ -34,14 +34,17 @@ class LianjiaMongodbPipeline(object):
         self.db['EsfInfo'].ensure_index('id', unique=True)
         self.db['ZfInfo'].ensure_index('id', unique=True)
 
+        # 此方法用于在，scrapy启动的时候添加一些已经跑过的url，让爬虫不需要重复跑
         new_items = self.db['NewInfo'].find({})
         for new_item in new_items:
             init_add_request(spider, new_item['url'])
 
+        # 此方法用于在，scrapy启动的时候添加一些已经跑过的url，让爬虫不需要重复跑
         er_items = self.db['EsfInfo'].find({})
         for er_item in er_items:
             init_add_request(spider, er_item['url'])
 
+        # 此方法用于在，scrapy启动的时候添加一些已经跑过的url，让爬虫不需要重复跑
         zu_items = self.db['ZfInfo'].find({})
         for zu_item in zu_items:
             init_add_request(spider, zu_item['url'])
